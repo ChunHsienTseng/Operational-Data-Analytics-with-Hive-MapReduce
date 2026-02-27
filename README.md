@@ -14,16 +14,19 @@ This project produces aggregated operational metrics and joins results with meta
 - Linux (Linux)
 
 ## Repository Structure
-- `src/hive/` – Hive (Hive) external tables + aggregation queries
+- `src/hive/` – Hive (Hive) external tables + join/aggregation queries
 - `src/mapreduce/` – MRJob (MRJob) MapReduce (MapReduce) jobs + metadata joins
-- `data/sample/` – small sample dataset for quick local runs
-- `outputs/` – example outputs / logs
+- `data/raw/` – raw MovieLens (MovieLens) files (u.data/u.item/u.user)
+- `data/sample/` – small sample dataset for quick local runs (optional)
+- `outputs/hive/` – Hive (Hive) execution logs / query outputs
+- `outputs/mapreduce/` – MapReduce (MapReduce) outputs (optional)
 - `docs/` – report + resume mapping notes
 
-## How to Run (Local Sample)
-> This repo includes a small sample dataset for quick validation.
+## How to Run
 
 ### Option A: Run MRJob locally (no Hadoop needed)
+> If you keep `data/sample/`, you can validate quickly on a small dataset.
+
 ```bash
-python src/mapreduce/top_movies_count.py data/sample/ratings_sample.csv > outputs/top_movies_count.txt
-python src/mapreduce/join_movie_titles.py outputs/top_movies_count.txt data/sample/movies_sample.csv > outputs/top_movies_with_titles.txt
+python src/mapreduce/top_movies_count.py data/sample/ratings_sample.csv > outputs/mapreduce/top_movies_count.txt
+python src/mapreduce/join_movie_titles.py outputs/mapreduce/top_movies_count.txt data/sample/movies_sample.csv > outputs/mapreduce/top_movies_with_titles.txt
