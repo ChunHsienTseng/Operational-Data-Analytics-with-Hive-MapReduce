@@ -1,32 +1,44 @@
-# Operational Data Analytics with Hive & MapReduce
+# 🚀 Operational Data Analytics with Hive & MapReduce
 
-A repeatable batch analytics workflow using Linux (Linux), Hadoop (Hadoop), HDFS (HDFS), Hive (Hive), and Python MRJob (MRJob) MapReduce (MapReduce).  
-This project produces aggregated operational metrics and joins results with metadata for structured reporting.
+![Hadoop](https://img.shields.io/badge/Hadoop-66CCFF?style=for-the-badge&logo=apachehadoop&logoColor=black)
+![Hive](https://img.shields.io/badge/Hive-FDEE21?style=for-the-badge&logo=apachehive&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
-## Highlights (Resume Mapping)
-- Built a repeatable batch analytics workflow on Linux (Linux), Hadoop (Hadoop), and Hive (Hive) to produce aggregated operational metrics.
-- Implemented Python (Python) / MRJob (MRJob) MapReduce (MapReduce) jobs to compute and join results with metadata for structured reporting.
+A repeatable batch analytics workflow built on **Linux**, **Hadoop (HDFS)**, **Hive**, and **Python (MRJob)**. This project focuses on processing large-scale operational data, generating aggregated metrics, and joining results with metadata for structured reporting.
 
-## Tech Stack
-- Hadoop (Hadoop), HDFS (HDFS)
-- Hive (Hive) / HiveQL (HiveQL)
-- Python (Python), MRJob (MRJob)
-- Linux (Linux)
+---
 
-## Repository Structure
-- `src/hive/` – Hive (Hive) external tables + join/aggregation queries
-- `src/mapreduce/` – MRJob (MRJob) MapReduce (MapReduce) jobs + metadata joins
-- `data/raw/` – raw MovieLens (MovieLens) files (u.data/u.item/u.user)
-- `data/sample/` – small sample dataset for quick local runs (optional)
-- `outputs/hive/` – Hive (Hive) execution logs / query outputs
-- `outputs/mapreduce/` – MapReduce (MapReduce) outputs (optional)
-- `docs/` – report + resume mapping notes
+## 🌟 Project Highlights (Resume Mapping)
 
-## How to Run
+* **Scalable Batch Workflow**: Engineered a repeatable analytics pipeline on Linux and Hadoop to produce business-critical operational metrics.
+* **Data Warehousing**: Designed and managed Hive external tables and executed complex HiveQL queries for data aggregation.
+* **Distributed Computing**: Implemented MapReduce jobs using the **Python MRJob** framework to compute large-scale data joins and metadata enrichment.
 
-### Option A: Run MRJob locally (no Hadoop needed)
-> If you keep `data/sample/`, you can validate quickly on a small dataset.
+---
+
+## 🛠 Tech Stack
+
+| Category | Tools |
+| :--- | :--- |
+| **Distributed Storage** | Hadoop HDFS |
+| **Data Warehousing** | Apache Hive, HiveQL |
+| **Compute Framework** | MapReduce, Python (MRJob) |
+| **Environment** | Linux Shell / Bash |
+
+---
+
+## 📂 Repository Structure
 
 ```bash
-python src/mapreduce/top_movies_count.py data/sample/ratings_sample.csv > outputs/mapreduce/top_movies_count.txt
-python src/mapreduce/join_movie_titles.py outputs/mapreduce/top_movies_count.txt data/sample/movies_sample.csv > outputs/mapreduce/top_movies_with_titles.txt
+.
+├── src/
+│   ├── hive/            # 🍯 Hive external table schemas + aggregation queries
+│   └── mapreduce/       # 🐍 Python MRJob scripts + metadata join logic
+├── data/
+│   ├── raw/             # 📁 MovieLens raw data (u.data, u.item, u.user)
+│   └── sample/          # 🧪 Mini-datasets for rapid local validation
+├── outputs/
+│   ├── hive/            # 📝 Query execution logs & analytical outputs
+│   └── mapreduce/       # 📊 MapReduce computation results
+└── docs/                # 📖 Technical reports & Resume mapping notes
