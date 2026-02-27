@@ -1,4 +1,4 @@
-# 🚀 Operational Data Analytics with Hive & MapReduce
+# Operational Data Analytics with Hive & MapReduce
 
 ![Hadoop](https://img.shields.io/badge/Hadoop-66CCFF?style=for-the-badge&logo=apachehadoop&logoColor=black)
 ![Hive](https://img.shields.io/badge/Hive-FDEE21?style=for-the-badge&logo=apachehive&logoColor=black)
